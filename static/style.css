@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Alothea';
+    src: url('/static/alothea-font/Alothea-Font/Alothea/Alothea.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Alothea', sans-serif;
+    font-size: 34px;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: #d60000;
+    padding: 10px;
+    color: white;
+    font-size: 36px;
+}
+
+h5 {
+    background-size: 10% 10%;
+    border-style: double;
+    border-width: 10px;
+    background-color: #fff2d8;
+    border-color: #e7c3ab;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-right-width: 10px;
+    border-right-style: inset;
+    border-bottom-width: 10px;
+    border-bottom-style: inset;
+    border-top-width: 6px;
+    background-position: center;
+    padding: 13px;
+    margin: 10px auto;
+    margin-top: 10px;
+    width: 60%;
+    box-sizing: border-box;
+    color: black;
+    word-wrap: break-word;
+}
+
+h5 + h5 {
+    background-color: #fff2d8;
+    margin-top: auto;
+    border-top-right-radius: 13px;
+    border-top-left-radius: 13px;
+    border-bottom-style: inset;
+    border-right-style: inset;
+    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-bottom-width: 10px;
+    border-right-width: 10px;
+    border-left-style: double;
+    border-left-width: 10px;
+    border-color: #F3D9B6FF;
+}
+
+section {
+    display: none;
+    background-color: beige;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    max-width: 600px;
+    opacity: 1;
+    border: 5px solid black;
+    position: relative;
+    z-index: 1;
+}
+
+section::before,
+section::after {
+    content: '💖'; /* Unicode heart character */
+    font-size: 24px;
+    color: black;
+    position: absolute;
+    top: -15px; /* Adjusted distance from the top */
+}
+
+section::before {
+    left: -15px; /* Adjusted distance from the left */
+    transform: rotate(-40deg); /* Adjusted rotation for the left heart */
+}
+
+section::after {
+    right: -15px; /* Adjusted distance from the right */
+    transform: rotate(40deg); /* Adjusted rotation for the right heart */
+}
+
+section.visible {
+    display: block;
+    opacity: 1;
+}
+
